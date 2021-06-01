@@ -10,46 +10,47 @@ def name():
     role = data[0]
     team = data[1]
 
-    if chapter == "Space Wolves"
-        if role == "Tactical Marine"
+    if chapter == "Space Wolves":
+        if role == "Tactical Marine":
             name =="Grimolf Ulfsson"
-        elif role == "Assault Marine"
+        elif role == "Assault Marine":
             name =="Ragnar Blackmane"
-        elif role == "Devastator Marine"
+        elif role == "Devastator Marine":
             name == "Gunbjorn Ironmaw"
-        elif role == "Scout Marine"
+        elif role == "Scout Marine":
             name == "One-Eye Frodi"
     
-    elif chapter == "Ultramarines"
-        if role == "Tactical Marine"
+    elif chapter == "Ultramarines":
+        if role == "Tactical Marine:"
             name =="Titus Grimaldus"
-        elif role == "Assault Marine"
+        elif role == "Assault Marine":
             name =="Maximus Tarimus"
-        elif role == "Devastator Marine"
+        elif role == "Devastator Marine":
             name == "Jonah Sidonis"
-        elif role == "Scout Marine"
+        elif role == "Scout Marine":
             name == "Barachiel Sadros"
     
-    elif chapter == "Imperial Fists"
-            if role == "Tactical Marine"
+    elif chapter == "Imperial Fists":
+            if role == "Tactical Marine":
             name =="Shal Cestros"
-        elif role == "Assault Marine"
+        elif role == "Assault Marine":
             name =="Uziel Aryabhon"
-        elif role == "Devastator Marine"
+        elif role == "Devastator Marine":
             name == "Klordath Aglibesco"
-        elif role == "Scout Marine"
+        elif role == "Scout Marine":
             name == "Kazryn Batariar"
     
-    elif chapter == "Dark Angels"
-            if role == "Tactical Marine"
+    elif chapter == "Dark Angels":
+            if role == "Tactical Marine":
             name =="Baelar Sadross"
-        elif role == "Assault Marine"
+        elif role == "Assault Marine":
             name =="Gabriel Manuzanus"
-        elif role == "Devastator Marine"
+        elif role == "Devastator Marine":
             name == "Lutheon Alcane"
-        elif role == "Scout Marine"
+        elif role == "Scout Marine":
             name == "Cassias Gabrun"
     
-    else return "Please Press Again"
+    else: 
+        return "Please Press Again"
 
     return Response(name)
