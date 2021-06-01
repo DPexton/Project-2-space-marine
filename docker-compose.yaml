@@ -20,4 +20,4 @@ services:
   name:
     container_name: space-marine-name
     image: davidpj/space-marine-name
-    build: ./chapter
+    build: ./name

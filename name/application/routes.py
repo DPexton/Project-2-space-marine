@@ -21,7 +21,7 @@ def name():
             name == "One-Eye Frodi"
     
     elif chapter == "Ultramarines":
-        if role == "Tactical Marine:"
+        if role == "Tactical Marine"
             name =="Titus Grimaldus"
         elif role == "Assault Marine":
             name =="Maximus Tarimus"
