@@ -2,22 +2,22 @@ version: "3.8"
 services:
   frontend:
     container_name: space-marine-frontend
-    image: davidpj/front-end
-    build: ./front-end
+    image: davidpj/space-marine-frontend
+    build: ./frontend
     ports:
     - published: 5000
       target: 5000
     environment:
       DATABASE_URI: ${DATABASE_URI}
   role:
-    container_name: role
-    image: davidpj/role
+    container_name: space-marine-role
+    image: davidpj/space-marine-role
     build: ./role
   chapter:
-    container_name: chapter
-    image: davidpj/chapter
+    container_name: space-marine-chapter
+    image: davidpj/space-marine-chapter
     build: ./chapter
   name:
-    container_name: name
-    image: davidpj/name
-    build: ./name
+    container_name: space-marine-name
+    image: davidpj/space-marine-name
+    build: ./chapter
