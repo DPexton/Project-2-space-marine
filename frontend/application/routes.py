@@ -10,7 +10,7 @@ def index():
 
     return render_template(
         'layout.html', 
-        title= 'Marine', 
+        title= 'Home', 
         role=role.txt, 
         chapter=chapter.txt, 
         result=result, 

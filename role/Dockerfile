@@ -1,9 +1,6 @@
-FROM python:3.7
-
-COPY ./requirements.txt
-
+FROM python:latest
+WORKDIR /app
+RUN pip install flask 
 COPY . .
-
-EXPOSE 5001
-
-ENTRYPOINT ["gunicorn", "--workers=2", "--bind=0.0.0.0:5001", "app:app"]
+EXPOSE 5000
+ENTRYPOINT ["python", "app.py"]
