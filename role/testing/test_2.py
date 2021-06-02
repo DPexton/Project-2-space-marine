@@ -10,7 +10,7 @@ class TestBase(TestCase):
 
 class TestResponse(TestBase):
 
-        def test_striker_position(self):
+        def test_role1(self):
             with patch('random.randrange') as r:
                 r.return_value = 0
                 response = self.client.get(url_for('role'))
@@ -18,7 +18,7 @@ class TestResponse(TestBase):
 
 class TestResponse(TestBase):
 
-        def test_striker_position(self):
+        def test_role2(self):
             with patch('random.randrange') as r:
                 r.return_value = 1
                 response = self.client.get(url_for('role'))
@@ -26,7 +26,7 @@ class TestResponse(TestBase):
 
 class TestResponse(TestBase):
 
-        def test_striker_position(self):
+        def test_role3(self):
             with patch('random.randrange') as r:
                 r.return_value = 2
                 response = self.client.get(url_for('role'))
@@ -34,7 +34,7 @@ class TestResponse(TestBase):
 
 class TestResponse(TestBase):
 
-        def test_striker_position(self):
+        def test_role4(self):
             with patch('random.randrange') as r:
                 r.return_value = 3
                 response = self.client.get(url_for('role'))
