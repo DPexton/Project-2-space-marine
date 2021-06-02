@@ -1,7 +1,7 @@
-from unittest.mock import patch
 from flask import url_for
 from flask_testing import TestCase
-from application import application
+import requests_mock
+from app import app
 
 class TestBase(TestCase):
 
@@ -11,31 +11,7 @@ class TestBase(TestCase):
 class TestResponse(TestBase):
 
         def test_role1(self):
-            with patch('random.randrange') as r:
-                r.return_value = 0
+            for _ in range(10):
                 response = self.client.get(url_for('role'))
-                self.assertIn(b'Tactical Marine', response.data)
+                self.assertIn(response.data.decode(),["Tactical Marine", "Assault Marine", "Devastator Marine", "Scout Marine"])
 
-class TestResponse(TestBase):
-
-        def test_role2(self):
-            with patch('random.randrange') as r:
-                r.return_value = 1
-                response = self.client.get(url_for('role'))
-                self.assertIn(b'Assault Marine', response.data)
-
-class TestResponse(TestBase):
-
-        def test_role3(self):
-            with patch('random.randrange') as r:
-                r.return_value = 2
-                response = self.client.get(url_for('role'))
-                self.assertIn(b'Devastator Marine', response.data)   
-
-class TestResponse(TestBase):
-
-        def test_role4(self):
-            with patch('random.randrange') as r:
-                r.return_value = 3
-                response = self.client.get(url_for('role'))
-                self.assertIn(b'Scout Marine', response.data)

@@ -5,6 +5,7 @@ import requests
 from os import getenv
 from sqlalchemy import desc
 
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = getenv('DATABASE_URI')
 
@@ -19,18 +20,19 @@ class Marine(db.Model):
 @app.route('/', methods=['GET', 'POST'])
 def index():
 
-    chapter = requests.get("http://service-2:5001/chapter")
-
-    role = requests.get("http://service-3:5002/role")
-
-    name = requests.post("http://service-4:5003/name", data=result)
-    result = str(chapter.text) + " " + str(role.text)
+    chapter = requests.get("http://space-marine-chapter:5000/chapter")
+    role = requests.get("http://space-marine-role:5000/role")
+    
+    result = str(chapter.text) + "," + str(role.text)
+    
+    name = requests.post("http://space-marine-name:5000/name", data=result)
+    
 
     return render_template(
         'layout.html', 
         title= 'Home', 
-        role=role.txt, 
-        chapter=chapter.txt, 
+        role=role.text, 
+        chapter=chapter.text, 
         result=result, 
         name=name.text
         )

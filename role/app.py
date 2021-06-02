@@ -1,13 +1,14 @@
-from flask import Flask
+from flask import Flask, Response, request
+import random
 
 app = Flask(__name__)
 
 @app.route('/role', methods=['GET'])
 def role():
     roles = ["Tactical Marine", "Assault Marine", "Devastator Marine", "Scout Marine"]
-    role = roles[random.randrange(0,4)]
+    role = random.choice(roles)
 
-    return Response(role)
+    return role
 
 
 if __name__ == "__main__":

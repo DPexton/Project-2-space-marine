@@ -9,32 +9,8 @@ class TestBase(TestCase):
 
 class TestResponse(TestBase):
 
-        def chapter_test1(self):
-            with patch('random.randrange') as r:
-                r.return_value = 0
-                response = self.client.get(url_for('role'))
-                self.assertIn(b'Space Wolves', response.data)
+        def test_role1(self):
+            for _ in range(10):
+                response = self.client.get(url_for('chapter'))
+                self.assertIn(response.data.decode(),["Space Wolves", "Ultramarines", "Imperial Fists", "Dark Angels"])
 
-class TestResponse(TestBase):
-
-        def chapter_test2(self):
-            with patch('random.randrange') as r:
-                r.return_value = 1
-                response = self.client.get(url_for('role'))
-                self.assertIn(b'Ultramarines', response.data)
-
-class TestResponse(TestBase):
-
-        def chapter_test3(self):
-            with patch('random.randrange') as r:
-                r.return_value = 2
-                response = self.client.get(url_for('role'))
-                self.assertIn(b'Imperial Fists', response.data)   
-
-class TestResponse(TestBase):
-
-        def chapter_test4(self):
-            with patch('random.randrange') as r:
-                r.return_value = 3
-                response = self.client.get(url_for('role'))
-                self.assertIn(b'Dark Angels', response.data)
