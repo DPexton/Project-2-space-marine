@@ -1,5 +1,5 @@
-from flask import flask
-from flask__sqlalchemy import SQLAlchemy
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 from os import getenv
 
 app = Flask(__name__)

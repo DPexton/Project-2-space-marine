@@ -6,6 +6,12 @@ from app import app
 
 class TestBase(TestCase):
     def create_app(self):
+        app.config.update(
+            SQLALCHEMY_DATABASE_URI= "sqlite:///test.db",
+            SECRET_KEY=getenv("SECRET_KEY"),
+            DEBUG=True,
+            WTF_CSRF_ENABLED=False
+        )
         return app
 
 class TestResponse(TestBase):
@@ -15,4 +21,4 @@ class TestResponse(TestBase):
                 a.return_value.text = "Space Wolves"
                 b.return_value.text = "Ragnar Blackmane"
                 response = self.client.get(url_for('index'))
-                self assertIn(b'Ragnar Blackmane, the Assault Marine of the Emperors Space Wolves Chapter!')
+                self.assertIn(b'Ragnar Blackmane, the Assault Marine of the Emperors Space Wolves Chapter!')
