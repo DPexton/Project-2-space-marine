@@ -1,7 +1,8 @@
 pipeline {
         agent any
         environment {
-            SECRET_KEY = credentials('SECRET_KEY')
+            docker-credentials = credentials('docker-credentials')
+            DATABASE_URI = credentials('DATABASE_URI')
         }
         stages{
             stage('Build Images'){
