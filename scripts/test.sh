@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt update 
-sudo apt install python3 python3-pip
+sudo apt install python3 python3-pip python3-pytest
 
 pip3 install -r requirements.txt
 pip3 install requests-mock
