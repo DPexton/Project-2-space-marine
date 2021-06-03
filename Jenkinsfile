@@ -1,12 +1,9 @@
 pipeline {
         agent any
-        environment{
-            docker_hub_credentials = credentials('docker-hub-credentials')
-        }
         stages{
             stage('Build Images'){
                 steps{
-                    sh "docker-compose build --parallel"  
+                    sh "./scripts/build.sh"
                 }
             }
             stage('test'){
