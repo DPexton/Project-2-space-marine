@@ -19,4 +19,4 @@ class TestResponse(TestBase):
             m.get("http://space-marine-role:5000/role",text="Assault Marine")
             m.post("http://space-marine-name:5000/name",text="Ragnar Blackmane")
             response = self.client.get(url_for('index'))
-            self.assertIn(b'Ragnar Blackmane, the Assault Marine of the Emperors Space Wolves Chapter!', response.data)
+            self.assertIn(b'You are Ragnar Blackmane, Assault Marine of the Emperors Space Wolves Chapter!', response.data)
