@@ -1,19 +1,22 @@
 pipeline {
         agent any
+        environment {
+            SECRET_KEY = credential(SECRET_KEY)
+        }
         stages{
             stage('Build Images'){
                 steps{
-                    sh "./scripts/build.sh"
+                    sh "bash scripts/build.sh"
                 }
             }
             stage('test'){
                 steps{
-                    sh "./scripts/test.sh"
+                    sh "bash scripts/test.sh"
                 }
             }
             stage('Deploy'){
                 steps{
-                    sh "./scripts/deploy.sh"
+                    sh "bash scripts/deploy.sh"
                 }
             }
         }
