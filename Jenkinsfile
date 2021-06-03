@@ -1,7 +1,7 @@
 pipeline {
         agent any
         environment {
-            SECRET_KEY = credential(SECRET_KEY)
+            SECRET_KEY = credentials(SECRET_KEY)
         }
         stages{
             stage('Build Images'){
