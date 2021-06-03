@@ -1,7 +1,7 @@
 pipeline {
         agent any
         environment {
-            docker-credentials=credentials('docker-credentials')
+            docker_credentials = credentials('docker_credentials')
             DATABASE_URI=credentials('DATABASE_URI')
         }
         stages{
