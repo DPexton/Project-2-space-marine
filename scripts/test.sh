@@ -7,7 +7,7 @@ pip3 install -r requirements.txt
 pip3 install requests-mock
 
 export DATABASE_URI
-export SECRET_KEY
+
 
 python3 -m pytest front-end --junitxml=junit/test_results.xml --cov=app --cov-report=xml --cov-report=html
 python3 -m pytest operator_random --junitxml=junit/test_results1.xml --cov=app --cov-report=xml --cov-report=html
