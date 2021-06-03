@@ -1,22 +1,15 @@
-#! /bin/bash
-cd frontend/
+#!/bin/bash
+
+sudo apt update 
+sudo apt install python3 python3-pip
+
 pip3 install -r requirements.txt
-python3 -m pytest --cov . --cov-report=html --cov-report=xml
+pip3 install requests-mock
 
-cd ..
+export DATABASE_URI
+export SECRET_KEY
 
-cd chapter/
-pip3 install -r requirements.txt
-python3 -m pytest --cov . --cov-report=html --cov-report=xml
-
-cd ..
-
-cd role/
-pip3 install -r requirements.txt
-python3 -m pytest --cov . --cov-report=html --cov-report=xml
-
-cd ..
-
-cd name/
-pip3 install -r requirements.txt
-python3 -m pytest --cov . --cov-report=html --cov-report=xml
+python3 -m pytest front-end --junitxml=junit/test_results.xml --cov=app --cov-report=xml --cov-report=html
+python3 -m pytest operator_random --junitxml=junit/test_results1.xml --cov=app --cov-report=xml --cov-report=html
+python3 -m pytest strat_random --junitxml=junit/test_results2.xml --cov=app --cov-report=xml --cov-report=html
+python3 -m pytest points --junitxml=junit/test_results3.xml --cov=app --cov-report=xml --cov-report=html
