@@ -4,10 +4,10 @@
 sudo apt update 
 sudo apt install python3 python3-pip python3-pytest
 
+python3 -m venv venv
+source venv/bin/activate
 pip3 install -r requirements.txt
 pip3 install requests-mock
-
-export DATABASE_URI
 
 
 python3 -m pytest frontend --junitxml=junit/test_frontend.xml --cov=app --cov-report=xml --cov-report=html
