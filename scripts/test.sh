@@ -11,7 +11,7 @@ pip3 install -r frontend/requirements.txt
 pip3 install requests-mock
 
 
-python3 -m pytest frontend --junitxml=junit/test_frontend.xml --cov=app --cov-report=xml --cov-report=html
-python3 -m pytest chapter --junitxml=junit/test_chapter.xml --cov=app --cov-report=xml --cov-report=html
-python3 -m pytest role --junitxml=junit/test_role.xml --cov=app --cov-report=xml --cov-report=html
-python3 -m pytest name --junitxml=junit/test_name.xml --cov=app --cov-report=xml --cov-report=html
+python3 -m pytest frontend --junitxml=junit/test_frontend.xml --cov=frontend --cov-report=xml --cov-report=html
+python3 -m pytest chapter --junitxml=junit/test_chapter.xml --cov=chapter --cov-report=xml --cov-report=html
+python3 -m pytest role --junitxml=junit/test_role.xml --cov=role --cov-report=xml --cov-report=html
+python3 -m pytest name --junitxml=junit/test_name.xml --cov=name --cov-report=xml --cov-report=html
