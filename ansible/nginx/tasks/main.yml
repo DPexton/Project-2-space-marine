@@ -5,7 +5,7 @@
     name: nginx
     state: present
     update_cache: true
-  register: nignx_time
+  register: nginx_time
 
 - name: check install
   debug:
