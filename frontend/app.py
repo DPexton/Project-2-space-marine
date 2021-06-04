@@ -20,12 +20,12 @@ class Marine(db.Model):
 @app.route('/', methods=['GET', 'POST'])
 def index():
 
-    chapter = requests.get("http://space-marine-chapter:5000/chapter")
-    role = requests.get("http://space-marine-role:5000/role")
+    chapter = requests.get("http://space-marine-chapter:5001/chapter")
+    role = requests.get("http://space-marine-role:5002/role")
     
     result = str(chapter.text) + "," + str(role.text)
     
-    name = requests.post("http://space-marine-name:5000/name", data=result)
+    name = requests.post("http://space-marine-name:5003/name", data=result)
     
 
     return render_template(
