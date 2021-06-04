@@ -3,11 +3,11 @@
 
 sudo apt update 
 sudo apt install python3 python3-pip 
-sudo apt-get install python3-venv y
+sudo apt-get install python3-venv -y
 
 python3 -m venv venv
 source venv/bin/activate
-pip3 install -r requirements.txt
+pip3 install -r frontend/requirements.txt
 pip3 install requests-mock
 
 
