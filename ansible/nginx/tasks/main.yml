@@ -17,7 +17,7 @@
     state: started
  
 - name: Template nginx file
-  ansilble.builtin.template:
+  ansible.builtin.template:
     src: /templates/nginx.conf
     dest: /etc/nginx/nginx.conf
     owner: bin
