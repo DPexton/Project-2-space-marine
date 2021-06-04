@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 sudo apt update 
@@ -9,7 +10,7 @@ pip3 install requests-mock
 export DATABASE_URI
 
 
-python3 -m pytest front-end --junitxml=junit/test_results.xml --cov=app --cov-report=xml --cov-report=html
-python3 -m pytest operator_random --junitxml=junit/test_results1.xml --cov=app --cov-report=xml --cov-report=html
-python3 -m pytest strat_random --junitxml=junit/test_results2.xml --cov=app --cov-report=xml --cov-report=html
-python3 -m pytest points --junitxml=junit/test_results3.xml --cov=app --cov-report=xml --cov-report=html
+python3 -m pytest frontend --junitxml=junit/test_frontend.xml --cov=app --cov-report=xml --cov-report=html
+python3 -m pytest chapter --junitxml=junit/test_chapter.xml --cov=app --cov-report=xml --cov-report=html
+python3 -m pytest role --junitxml=junit/test_role.xml --cov=app --cov-report=xml --cov-report=html
+python3 -m pytest name --junitxml=junit/test_name.xml --cov=app --cov-report=xml --cov-report=html
