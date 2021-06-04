@@ -1,6 +1,6 @@
 ---
 # tasks file for install-docker- 
-name: 'Install dependencies'
+- name: 'Install dependencies'
   apt:
     pkg:
     - apt-transport-https 
