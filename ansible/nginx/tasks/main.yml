@@ -5,17 +5,12 @@
     name: nginx
     state: present
     update_cache: true
-  register: nginx_time
 
-- name: Start nginx
-  service:
-    name: nginx
-    state: started
- 
 - name: Template nginx file
   ansible.builtin.template:
     src: nginx.conf
     dest: /etc/nginx/nginx.conf
+  register: nginx_config
 
 - name: Restart nginx 
   service:
