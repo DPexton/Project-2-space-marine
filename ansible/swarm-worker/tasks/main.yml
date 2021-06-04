@@ -1,6 +1,6 @@
 ---
 # tasks file for swarm_worker- 
-name: Add worker
+- name: Add worker
   docker_swarm:
     state: join
     advertise_addr: swarm-worker, swarm-worker2
