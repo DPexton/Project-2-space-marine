@@ -1,6 +1,6 @@
 #!/bin/bash
 
-scp docker-compose.yaml project-swarm-manager:
+scp docker-compose.yaml swarm-manager:
 
 ssh project-swarm-manager << EOF 
 
