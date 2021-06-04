@@ -15,10 +15,22 @@ pipeline {
                     sh "bash scripts/test.sh"
                 }
             }
+            stage('config'){
+                steps{
+                    sh "bash asnsible.sh"
+                    sh "ansible-playbook -i inventory.yaml playbook.yaml"
+                }
+            }
             stage('Deploy'){
                 steps{
                     sh "bash scripts/deploy.sh"
                 }
+            }
+        }
+        post{
+            always{
+                junit "junit/*.xml"
+                cobertura coberturaReportFile: 'coverage.xml', failNoReports:false
             }
         }
 }
