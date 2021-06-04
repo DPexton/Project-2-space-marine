@@ -18,7 +18,7 @@ pipeline {
             stage('config'){
                 steps{
                     sh "bash ansible.sh"
-                    sh "ansible-playbook -i inventory.yaml playbook.yaml"
+                    sh "ansible-playbook -i ansible/inventory.yaml ansible/playbook.yaml"
                 }
             }
             stage('Deploy'){
