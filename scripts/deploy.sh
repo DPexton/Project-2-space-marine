@@ -2,7 +2,7 @@
 
 scp docker-compose.yaml swarm-manager:
 
-ssh project-swarm-manager << EOF 
+ssh swarm-manager << EOF 
 
 export DATABASE_URI=${DATABASE_URI}
 
