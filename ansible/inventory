@@ -1,0 +1,10 @@
+[managers]
+swarm-manager
+
+[workers]
+swarm-worker
+swarm-worker2
+swarm-worker3
+
+[load_balance]
+nginx
