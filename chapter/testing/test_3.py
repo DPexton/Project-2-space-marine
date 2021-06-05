@@ -12,5 +12,5 @@ class TestResponse(TestBase):
         def test_role1(self):
             for _ in range(10):
                 response = self.client.get(url_for('chapter'))
-                self.assertIn(response.data.decode(),["Space Wolves", "Ultramarines", "Imperial Fists", "Dark Angels, Salamanders, Blood Angels"])
+                self.assertIn(response.data.decode(),["Space Wolves", "Ultramarines", "Imperial Fists", "Dark Angels", "Salamanders", "Blood Angels"])
 
