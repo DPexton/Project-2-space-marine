@@ -14,7 +14,7 @@ services:
     image: davidpj/space-marine-role
     build: ./role
   space-marinechapter:
-    container-name: space-marine-chapter
+    container_name: space-marine-chapter
     image: davidpj/space-marine-chapter
     build: ./chapter
   space-marine-name:
