@@ -21,7 +21,7 @@ def name():
             name = "Gunbjorn Ironmaw"
         elif role == "Scout Marine":
             name = "One-Eye Frodi"
-        elif role == "Terminator Marine"
+        elif role == "Terminator Marine":
             name = "Tyreous Hengun"
     
     elif chapter == "Ultramarines":
@@ -33,7 +33,7 @@ def name():
             name = "Jonah Sidonis"
         elif role == "Scout Marine":
             name = "Barachiel Sadros"
-        elif role == "Terminator Marine"
+        elif role == "Terminator Marine":
             name = "Aecon Evidist"
     
     elif chapter == "Imperial Fists":
@@ -45,7 +45,7 @@ def name():
             name = "Klordath Aglibesco"
         elif role == "Scout Marine":
             name = "Kazryn Batariar"
-        elif role == "Terminator Marine"
+        elif role == "Terminator Marine":
             name = "Kazrago Hannibia"
     
     
