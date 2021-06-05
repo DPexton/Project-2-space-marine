@@ -34,7 +34,7 @@ class TestResponse(TestBase):
        'Salamanders,Tactical Marine': b"Belial Iasiar",
        'Salamanders,Assault Marine': b"Varreon Baaloss",
        'Salamanders,Devastator Marine': b"Sappheran Petrail",
-       'Salamanders,Scout Marine': b"Ophaniel Salatis"
+       'Salamanders,Scout Marine': b"Ophaniel Salatis",
        'Salamanders,Terminator Marine': b"Maximiz Zephit",
        'Blood Angels,Tactical Marine': b"Beler Antilochiad",
        'Blood Angels,Assault Marine': b"Azazel Annellurius",
