@@ -14,7 +14,7 @@ class TestResponse(TestBase):
        'Space Wolves,Tactical Marine': b"Grimolf Ulfsson",
        'Space Wolves,Assault Marine': b"Ragnar Blackmane",
        'Space Wolves,Devastator Marine': b"Gunbjorn Ironmaw",
-       'Space Wolves,Scout Marine': b"One-Eye Frodi"
+       'Space Wolves,Scout Marine': b"One-Eye Frodi",
        'Space Wolves,Terminator Marine': b"Tyreous Hengun",
        'Ultramarines,Tactical Marine': b"Titus Grimaldus",
        'Ultramarines,Assault Marine': b"Maximus Tarimus",
