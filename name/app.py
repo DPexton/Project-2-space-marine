@@ -84,6 +84,7 @@ def name():
             name = "Azreal Berian"
         elif role == "Terminator Marine":
             name = "Sarathiel Asbeo"  
+    
     else: 
         return "Please Press Again"
 
