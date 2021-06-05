@@ -9,7 +9,7 @@ app = Flask(__name__)
 def name():
     
     
-    chapter,role = request.data.decode().split(',')[1:]
+    chapter,role = request.data.decode().split(',')
     
     #raise ValueError((role,chapter))
     if chapter == "Space Wolves":
