@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/role', methods=['GET'])
 def role():
-    roles = ["Tactical Marine", "Assault Marine", "Devastator Marine", "Scout Marine, Terminator Marine"]
+    roles = ["Tactical Marine", "Assault Marine", "Devastator Marine", "Scout Marine", "Terminator Marine"]
     role = random.choice(roles)
 
     return role
