@@ -15,8 +15,8 @@ class TestBase(TestCase):
 class TestResponse(TestBase):
     def test_frontend(self):
         with requests_mock.mock() as m:
-            m.get("http://space-marine-chapter:5000/chapter",text="Space Wolves")
-            m.get("http://space-marine-role:5000/role",text="Assault Marine")
-            m.post("http://space-marine-name:5000/name",text="Ragnar Blackmane")
+            m.get("http://chapter:5000/chapter",text="Space Wolves")
+            m.get("http://role:5000/role",text="Assault Marine")
+            m.post("http://name:5000/name",text="Ragnar Blackmane")
             response = self.client.get(url_for('index'))
             self.assertIn(b'You are Ragnar Blackmane, Assault Marine of the Emperors Space Wolves Chapter!', response.data)
