@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   space-marine-frontend:
-    container-name: space-marine-frontend
+    container_name: space-marine-frontend
     image: davidpj/space-marine-frontend
     build: ./frontend
     ports:
@@ -10,7 +10,7 @@ services:
     environment:
       DATABASE_URI: ${DATABASE_URI}
   space-marine-role:
-    container-name: space-marine-role
+    container_name: space-marine-role
     image: davidpj/space-marine-role
     build: ./role
   space-marinechapter:
@@ -18,6 +18,6 @@ services:
     image: davidpj/space-marine-chapter
     build: ./chapter
   space-marine-name:
-    container-name: space-marine-name
+    container_name: space-marine-name
     image: davidpj/space-marine-name
     build: ./name
