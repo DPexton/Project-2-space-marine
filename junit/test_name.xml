@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.373" timestamp="2021-06-04T16:00:18.712886" hostname="space-marine-jenkins"><testcase classname="name.testing.test_4.TestResponse" name="test_spacewolves1" time="0.022" /></testsuite></testsuites>
