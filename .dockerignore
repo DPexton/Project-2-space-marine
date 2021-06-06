@@ -1,9 +1,6 @@
-# ignore the docs folder
-docs
-
-# ignore all markdown files
-*.md
-*.dockerignore
-
-# in this case, we can make an exception for the README
-!README.md
+.pytest_cache
+.vscode
+jenkins/
+.coverage
+.gitignore
+configure-swarm/
