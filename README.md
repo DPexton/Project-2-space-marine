@@ -67,7 +67,7 @@ This is the final version of my project risk assessment. As you can see at the b
 Here is a simple diagram showing the database created by my application to handle the Space Marine information. Due to the nature of the application only one database is needed.
 
 ### Continuous Integration
-Below you can see my CI pipeline, showing my projects beginning from a trello board, into the source code being created through Python and Flask and stored on my version control system (GitHub). From here the code is built through a Jenkins pipeline which implements pytest to complete unit testing. This is then built by docker compose and passed to a swarm manager and workers. Nginx was used as a load balancer and this along with docker swarm was configured using Ansible.
+Below you can see my CI pipeline, showing my projects beginning from a trello board, into the source code being created through Python and Flask and stored on my version control system (GitHub). From here the code is built through a Jenkins pipeline which implements pytest to complete unit testing. This is then built by docker compose and passed to a swarm manager and workers. Nginx was used as a load balancer and this along with docker swarm was configured using Ansible. Using the Jenkins pipeline also means that whenever anything is pushed to the relevant branch on GitHub. The application will update and apply the changes automatically.
 
 ![CI-Pipeline](https://i.imgur.com/fhX13JG.jpg)
 
