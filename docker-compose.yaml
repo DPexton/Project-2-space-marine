@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  frontend:
+    container_name: frontend
+    image: davidpj/frontend
+    build: ./frontend
+    ports:
+    - published: 5000
+      target: 5000
+    environment:
+      DATABASE_URI: ${DATABASE_URI}
+  role:
+    container_name: role
+    image: davidpj/role
+    build: ./role
+  chapter:
+    container_name: chapter
+    image: davidpj/chapter
+    build: ./chapter
+  name:
+    container_name: name
+    image: davidpj/name
+    build: ./name
