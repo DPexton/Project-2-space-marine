@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/chapter', methods=['GET'])
 def chapter():
-    chapters = ["Space Wolves", "Ultramarines", "Imperial Fists", "Dark Angels"]
+    chapters = ["Space Wolves", "Ultramarines", "Imperial Fists", "Dark Angels", "Salamanders", "Blood Angels"]
     chapter = random.choice(chapters)
     return chapter
 
